@@ -45,20 +45,16 @@ class Punto:
     def distancia(self, other):
         return math.sqrt((self.x - other.x)**2 + (self.y - other.y)**2)
     
-if __name__ == "__main__":
-    p1 = Punto(2, 3)
-    p2 = Punto(5, 5)
-    print(p1)
-    print(p1.cuadrante())
-    print(p2)
-    print(p2.cuadrante())
-    print(p1.vector(p2))
-    print(p1.modulo())
-    print(p1.distancia(p2))
-    print(p1 + p2)
-    print(p1 - p2)
-    print(p1 * p2)
-    
+    def punto_mas_lejano(puntos):
+        for i in range(len(puntos)):
+            if i == 0:
+                max = puntos[i].modulo()
+                punto = puntos[i]
+            else:
+                if puntos[i].modulo() > max:
+                    max = puntos[i].modulo()
+                    punto = puntos[i]
+        return punto
 
     
     

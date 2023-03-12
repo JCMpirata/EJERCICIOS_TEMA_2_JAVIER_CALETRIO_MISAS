@@ -24,15 +24,3 @@ class Rectangulo:
     def __str__(self):
         return "Rectangulo con esquinas en los puntos ({}, {}) y ({}, {})".format(self.p1.x, self.p1.y, self.p2.x, self.p2.y)
     
-
-if __name__ == "__main__":
-    p1 = pt.Punto(3, 4)
-    p2 = pt.Punto(5, 1)
-    r = Rectangulo(p1, p2)
-    print(r)
-    print("Base: ", r.base())
-    print("Altura: ", r.altura())
-    print("Area: ", r.area())
-    print("Perimetro: ", r.perimetro())
-    print("Diagonal: ", r.diagonal())
-    

@@ -2,6 +2,7 @@ import PUNTO as pt
 import RECTANGULO as rec
 import math
 
+
 if __name__ == "__main__":
     A = pt.Punto(2, 3)
     print(A)
@@ -24,6 +25,8 @@ if __name__ == "__main__":
 
     print("Distancia entre A y B: ", A.distancia(B))
     print("Distancia entre B y A: ", B.distancia(A))
+
+    print("Punto mas lejano: ", pt.Punto.punto_mas_lejano([A, B, C, D]))
 
     r = rec.Rectangulo(A, B)
     print(r)
